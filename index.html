@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>โปรแกรมคำนวณเกรดอัตโนมัติ</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav>
+        <div class="img">
+            <img src="kutc.png" alt="" width="50">
+            <p class="aaa" >หน้าหลักแดชบอร์ด</p>
+        </div>
+        <div class="img">
+            <p>หน้าเว็บนี้เป็นส่วนหนึ่งของการเรียนการสอนเท่านั้น</p>
+        </div>
+    </nav>
+
+    <div class="body1">
+      <div class="container">
+        
+        <h2>โปรแกรมการคำนวณเกรดอัตโนมัติ</h2>
+                    <div class="form-group">
+                    <label>คะแนนกลางภาค</label>
+                    <input type="number" id="mid" placeholder="กรุณาระบุคะแนนกลางภาค" oninput="if(this.value > 30 )this.value = 30;">
+                    <p class="aaa">คะแนนสอบกลางภาคสามารถกรอกได้ไม่เกิน 30 คะแนน</p>
+                    </div>
+                    <div class="form-group">
+                    <label>คะแนนปลายภาค</label>
+                    <input type="number" id="final" placeholder="กรุณาระบุคะแนนปลายภาค"oninput="if(this.value > 50 )this.value = 50;">
+                    <p class="aaa">คะแนนสอบปลายภาคสามารถกรอกได้ไม่เกิน 50 คะแนน</p>
+
+                    </div>
+                    <div class="form-group">
+                    <label>คะแนนจิตพิสัย</label>
+                    <input type="number" id="work" placeholder="กรุณาระบุคะแนนจิตพิสัย"oninput="if(this.value > 20 )this.value = 20;">
+                    <p class="aaa">คะแนนจิตพิสัยสามารถกรอกได้ไม่เกิน 20 คะแนน</p>
+
+                    </div>
+                    
+                    <button onclick="calculateGrade()">คำนวณเกรด</button>
+                    
+                    <div class="result" id="result"></div>
+
+                    <div class="condition-box">
+                    <h2><b>เงื่อนไขการแปลงคะแนน</b></h2>
+                    <p>ถ้าคะแนนรวมมากกว่า 80 คะแนนขึ้นไป จะได้เกรด A</p>
+                    <p>ถ้าคะแนนรวมมากกว่า 70-80 คะแนน จะได้เกรด B</p>
+                    <p>ถ้าคะแนนรวมมากกว่า    60-70 คะแนน จะได้เกรด C</p>
+                    <p>ถ้าคะแนนรวมมากกว่า 50-60 คะแนน จะได้เกรด D</p>
+                    <p>ถ้าคะแนนรวมน้อยกว่า 50 คะแนน จะได้เกรด F</p>
+                    <p>โดยที่คะแนนรวม เกิดจาก คะแนนการสอบกลางภาค รวมกับ คะแนนการสอบปลายภาค และรวมกับคะแนนจิตพิสัยในการมีส่วนร่วมในชั้นเรียน</p>
+                    </div>
+                </div> 
+                <hr>
+                <footer>
+                    <p>จัดทำโดย นางสาวปาณัทดา อาปะโม รหัสนักศึกษา 68319010004</p>
+                </footer>
+         </div>  
+</body>
+</html>
